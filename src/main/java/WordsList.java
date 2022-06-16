@@ -1,7 +1,7 @@
 import java.util.ArrayList;
-import java.util.Arrays;
+//import java.util.Arrays;
 import java.util.HashSet;
-import java.util.SortedSet;
+//import java.util.SortedSet;
 
 public class WordsList {
     public static void main(String[] args) {
@@ -54,5 +54,5 @@ public class WordsList {
         System.out.println(word);
     }
     }
-
+//todo: расчет повторяющихся элементов
 }
