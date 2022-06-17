@@ -1,11 +1,10 @@
 import java.util.ArrayList;
-//import java.util.Arrays;
+import java.util.Collections;
 import java.util.HashSet;
-//import java.util.SortedSet;
 
 public class WordsList {
     public static void main(String[] args) {
-        ArrayList <Word> words = new ArrayList<Word>();
+        ArrayList <Word> words = new ArrayList<>();
         String[] wordsArr = {"ночь", "улица", "фонарь", "аптека", "свет", "четверть", "исход", "начало", "ночь", "рябь", "канал", "аптека", "улица", "фонарь"};
         addInList(wordsArr, words);
 
@@ -23,6 +22,9 @@ public class WordsList {
         for (Word word:unicWords) {
              System.out.println(word);
         }
+        System.out.println();
+        System.out.printf("Коллекция содежит %d элементов\n", unicWords.size());
+        System.out.println();
         System.out.println("*******************");
 
 
@@ -46,13 +48,25 @@ public class WordsList {
             System.out.println();
             System.out.println("=================");
             System.out.println();
-        */}
+        */
+        }
     }
 
     static void print (ArrayList<Word> words){
-    for (Word word:words) {
-        System.out.println(word);
+    String orphographic;
+    int uniCounter = 0;
+        for (Word word:words) {
+            if (Collections.frequency(words, word) > 1 && Collections.frequency(words, word) < 5){
+                orphographic = " раза";
+            } else {orphographic = " раз";}
+        if (Collections.frequency(words, word) == 1){
+            System.out.println(word + " (уникальный элемент)");
+            uniCounter ++;
+        } else {
+            System.out.println(word + " (повторяется " + Collections.frequency(words, word) + orphographic + ")");
+        }
     }
+        System.out.println();
+        System.out.printf("Коллекция содежит %d элементов, из них %d - уникальных\n", words.size(), uniCounter);
     }
-//todo: расчет повторяющихся элементов
 }
