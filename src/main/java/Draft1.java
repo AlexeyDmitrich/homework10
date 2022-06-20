@@ -1,6 +1,6 @@
 import java.util.*;
 
-public class PhoneBook {
+public class Draft1 {
     //TODO: фамилия - номер, (запилить класс)
     // add для добавления контакта,
     // get для чтения контакта по фамилии,

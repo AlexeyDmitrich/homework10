@@ -4,7 +4,7 @@ public class Phone {
 
     public Phone(String number) {
         this.number = number;
-        this.ovner = ovner;
+        this.ovner = ovner;   // была идея добавить к номеру его владельца, но она ушла вслед за необходимостью
     }
     public String getNumber() {
         return number;

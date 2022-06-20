@@ -14,7 +14,11 @@ public class Contact {
 
 
     @Override
-    public boolean equals(Object o) {
+    public boolean equals(Object o) {   // не знаю, насколько адекватно я подогнал метод под свои нужды,
+        // но пока он справляется со своей задачей.
+        // хотелось бы сделать метод, игнорирующий регистр, но прочтение документации по
+        // eqals привело меня в тёмный лес непонимания, как это сделать ((
+        // форумы и WikiHow не курил, так как в ДЗ это не по понятиям)
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         if (o instanceof Contact){
@@ -27,7 +31,7 @@ public class Contact {
     }
 
     @Override
-    public int hashCode() {
+    public int hashCode() {  // не в полной мере понимаю этот метод, но подозреваю, что он архиважен.
         return Objects.hash(this.name);
     }
 

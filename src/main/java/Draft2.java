@@ -1,6 +1,6 @@
 import java.util.*;
 
-public class PhBookWithoutContactClass {
+public class Draft2 {
 
         //TODO: фамилия - номер, (запилить класс)
         // add для добавления контакта,
@@ -48,12 +48,12 @@ public class PhBookWithoutContactClass {
             }
 
             else {
-                System.out.println("такой контакт уже был");
+/*                System.out.println("такой контакт уже был");
                 ArrayList<Phone> phones = (ArrayList<Phone>) phoneBook.(name);
                 System.out.println("предыдущая версия: " + phones);
                 phones.add(new Phone(number));
                 System.out.println("измененная версия: " + phones);
-            }
+*/            }
         }
         static void printAll (HashMap <ArrayList<Phone>, String> phoneBook){
             System.out.println("Телефонная книга:\n");
